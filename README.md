@@ -1,4 +1,4 @@
-# dr-svg-sprites
+# ahws-dr-svg-sprites
 
 > Create SVG sprites with PNG fallbacks at needed sizes
 
@@ -7,7 +7,7 @@
 Minimal:
 
 ```js
-var builder = require("dr-svg-sprites");
+var builder = require("ahws-dr-svg-sprites");
 var options = {
 	spriteElementPath: "img/logos",
 	spritePath: "img/sprites/logo-sprite.svg",
@@ -26,13 +26,14 @@ would yield the following files:
 Advanced:
 
 ```js
-var builder = require("dr-svg-sprites");
+var builder = require("ahws-dr-svg-sprites");
 var options = {
 	name: "tv",
 	prefix: "dr-logos",
 	spriteElementPath: "img/logos/tv",
 	spritePath: "img/sprites",
 	layout: "packed",
+	cssUrl: 'img'
 	cssPath: "css",
 	cssSuffix: "less",
 	cssUnit: "rem",
@@ -79,7 +80,7 @@ Type: `String`
 Default value: `""`
 Optional
 
-The path where to built a preview page. 
+The path where to built a preview page.
 
 If the filename part (ending in `.html`) is omitted it will be built from `options.prefix`, `options.name` and  `"sprite"`.
 
@@ -94,7 +95,7 @@ Destination path of the generated stylesheet.
 If a filename part is omitted it will get built from `options.cssPrefix`, `options.name`, `"sprite"` and `options.cssSuffix`.
 
 If left blank only svg sprites and png fallbacks are generated.
-			
+
 #### options.prefix
 Type: `String`
 Default value: `""`
@@ -125,14 +126,14 @@ Type: `String`
 Default value: `".svg"`
 Optional
 
-Defines a prefix for selectors to target svg sprites. 
+Defines a prefix for selectors to target svg sprites.
 
 #### options.cssPngPrefix
 Type: `String`
 Default value: `""`
 Optional
 
-Defines a prefix for selectors to target png sprites. 
+Defines a prefix for selectors to target png sprites.
 
 
 #### options.cssUnit
@@ -209,7 +210,7 @@ Optional
 
 Defines the basic size of your source svg-elements. All other sizes will be calculated relating to this. It can either be a key from the `sizes` option (which refers to a number) or just a raw number.
 
-![Source elements and refSize](https://raw.github.com/drdk/grunt-dr-svg-sprites/master/docs/img/docs-source-elements.png)
+![Source elements and refSize](https://raw.github.com/ahwswebdev/ahws-grunt-dr-svg-sprites/master/docs/img/docs-source-elements.png)
 
 Notice how one source element is bigger than the `refSize`; this ok - as every element is scaled proportionally.
 
@@ -231,13 +232,19 @@ var options = {
 };
 ```
 
-![sizes](https://raw.github.com/drdk/grunt-dr-svg-sprites/master/docs/img/docs-sprite-sizes.png)
+![sizes](https://raw.github.com/ahwswebdev/ahws-grunt-dr-svg-sprites/master/docs/img/docs-sprite-sizes.png)
 
 1 SVG sprite is generated and 2 PNG sprites (1 per defined size).
 
 ---
 
 ## Changelog
+
+### 0.0.1
+
+FORKED
+
+* `options.cssUrl` added.
 
 ### 0.9.0
 
@@ -258,6 +265,3 @@ Changes:
 * `options.sizes` and `options.refSize` are now optional (which also means no size tag is added to classnames if `options.sizes` is omitted).
 * `options.spritePath` and `options.cssPath` now also accept a full path including filename for simpler configuration.
 
-
-
-[![Analytics](https://ga-beacon.appspot.com/UA-8318361-2/drdk/dr-svg-sprites)](https://github.com/igrigorik/ga-beacon)

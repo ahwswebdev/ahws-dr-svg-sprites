@@ -1,18 +1,18 @@
 {
-  "name": "dr-svg-sprites",
+  "name": "ahws-dr-svg-sprites",
   "description": "Create SVG sprites with PNG fallbacks at needed sizes",
-  "version": "0.9.4",
+  "version": "0.0.1",
   "homepage": "",
   "author": {
-    "name": "rasmusfl0e",
-    "email": "rasmusfl0e@gmail.com"
+    "name": "ahwswebdev",
+    "email": "webdevelopment.sites.albert.nl@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/drdk/dr-svg-sprites.git"
+    "url": "git://github.com/ahwswebdev/ahws-dr-svg-sprites.git"
   },
   "bugs": {
-    "url": "https://github.com/drdk/dr-svg-sprites/issues"
+    "url": "https://github.com/ahwswebdev/ahws-dr-svg-sprites/issues"
   },
   "licenses": [
     {
