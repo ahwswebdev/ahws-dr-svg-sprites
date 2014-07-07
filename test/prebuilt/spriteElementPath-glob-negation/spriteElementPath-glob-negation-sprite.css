@@ -1,0 +1,21 @@
+.circle {
+	width: 30px;
+	height: 30px;
+	background-position: 0 0;
+}
+
+.square {
+	width: 26px;
+	height: 26px;
+	background-position: -35px 0;
+}
+
+.circle, .square {
+	background-size: 70px 35px;
+	background-repeat: no-repeat;
+	background-image: url("spriteElementPath-glob-negation-sprite.png");
+}
+
+.svg .circle, .svg .square {
+	background-image: url("spriteElementPath-glob-negation-sprite.svg");
+}
